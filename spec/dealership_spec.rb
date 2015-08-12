@@ -46,6 +46,15 @@ describe(Dealership) do
     end
   end
 
+  describe('.find') do
+    it('returns a dealership by its id') do
+      test_dealership = Dealership.new('Flying Dragon Used Cars')
+      test_dealership.save()
+      second_dealership = Dealership.new('Cat Meowing Used Cars')
+      second_dealership.save()
+      expect(Dealershio.find(test_dealership.id())).to(eq(test_dealership))
+    end
+  end
 
 
 end
