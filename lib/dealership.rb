@@ -5,6 +5,7 @@ class Dealership
   define_method(:initialize) do |name|
     @name = name
     @id = @@dealerships.length().+(1)
+    @cars = []
 
   end
 
@@ -15,5 +16,8 @@ class Dealership
   define_method(:id) do
     @id
   end
-  
+
+  define_method(:cars) do
+    @cars
+  end
 end
