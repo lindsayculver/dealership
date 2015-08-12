@@ -17,4 +17,11 @@ describe(Dealership) do
     end
   end
 
+  describe('#cars') do
+    it('adds an empty array of cars for the dealership') do
+      test_dealership = Dealership.new("Flying Dragon Used Cars")
+      expect(test_dealership.cars()).to(eq([]))
+    end
+  end
+
 end
