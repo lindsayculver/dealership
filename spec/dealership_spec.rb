@@ -52,7 +52,7 @@ describe(Dealership) do
       test_dealership.save()
       second_dealership = Dealership.new('Cat Meowing Used Cars')
       second_dealership.save()
-      expect(Dealershio.find(test_dealership.id())).to(eq(test_dealership))
+      expect(Dealership.find(test_dealership.id())).to(eq(test_dealership))
     end
   end
 
