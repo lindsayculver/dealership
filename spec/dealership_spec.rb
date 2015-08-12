@@ -32,4 +32,10 @@ describe(Dealership) do
     end
   end
 
+  describe('.all') do
+    it('the dealership array is empty at first') do
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
+
 end
