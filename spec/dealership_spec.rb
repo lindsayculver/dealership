@@ -3,6 +3,12 @@ require('dealership')
 
 describe(Dealership) do
 
+  describe('.all') do
+    it('the dealership array is empty at first') do
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
+
   describe('#name') do
     it('returns the name of the dealership') do
       test_dealership = Dealership.new("Flying Dragon Used Cars")
@@ -31,11 +37,11 @@ describe(Dealership) do
       expect(Dealership.all()).to(eq([test_dealership]))
     end
   end
-
-  describe('.all') do
-    it('the dealership array is empty at first') do
-      expect(Dealership.all()).to(eq([]))
-    end
-  end
+  #
+  # describe('.all') do
+  #   it('the dealership array is empty at first') do
+  #     expect(Dealership.all()).to(eq([]))
+  #   end
+  # end
 
 end
